@@ -12,7 +12,11 @@ import EditProduct from './app/screens/EditProduct';
 import Dash from './app/screens/Dash';
 import Checkout from './app/screens/Checkout';
 import UserDash from './app/screens/UserDash';
+import Orders from './app/screens/Orders';
+import OrderDetail from './app/screens/OrderDetail';
 import EditDetails from './app/screens/EditDetails';
+import AdminOrders from './app/screens/AdminOrders';
+import AdminOrderDetail from './app/screens/AdminOrderDetail';
 
 import { colors } from './app/config/colors';
 
@@ -40,6 +44,8 @@ export default function Route() {
               }} 
         />
         <Stack.Screen name="AdminProducts" component={AdminProducts} options={{ headerShown: false }} />
+        <Stack.Screen name="AdminOrders" component={AdminOrders} options={{ headerShown: false }} />
+        <Stack.Screen name="AdminOrderDetail" component={AdminOrderDetail} options={{ headerShown: false }} />
         <Stack.Screen name="EditProduct" component={EditProduct} 
           options={{
             title: 'Edit Product'
@@ -52,7 +58,21 @@ export default function Route() {
             title: 'User Dashboard'
           }} 
         />
-        <Stack.Screen name="EditDetails" component={EditDetails} options={{ headerShown: false }} />
+        <Stack.Screen name="Orders" component={Orders} 
+          options={{
+            title: 'Orders'
+          }} 
+        />
+        <Stack.Screen name="OrderDetail" component={OrderDetail} 
+          options={{
+            title: 'OrderDetail'
+          }} 
+        />
+        <Stack.Screen name="EditDetails" component={EditDetails} 
+          options={{ 
+            title: 'Edit Product'
+          }} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
